@@ -1,0 +1,26 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "fuck you",
+  "main": "index.js",
+  "scripts": {
+    "test": "node . && clear"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sxmurai/lavalink-client-testing.git"
+  },
+  "keywords": [
+    "fuck",
+    "you"
+  ],
+  "author": "Gavin | 2D",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Sxmurai/lavalink-client-testing/issues"
+  },
+  "homepage": "https://github.com/Sxmurai/lavalink-client-testing#readme",
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js"
+  }
+}
