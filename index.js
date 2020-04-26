@@ -1,5 +1,5 @@
 const { Client, CommandHandler, EventHandler } = require("./structures");
-const { prefix, owners, nodes, token } = reuqire("./config");
+const { prefix, owners, nodes, token } = require("./config");
 
 const client = new Client({
   prefix,
@@ -8,12 +8,7 @@ const client = new Client({
   token
 });
 
-const commandHandler = new CommandHandler(client);
-const eventHandler = new EventHandler(client);
 
 (async () => {
-    await client.start();
-
-    commandHandler.loadAll();
-    eventHandler.loadAll();
+  await client.start();
 })();

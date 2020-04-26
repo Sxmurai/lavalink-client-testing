@@ -1,3 +1,3 @@
 exports.Client = require("./Client");
-exports.CommandHandler = reuqire("./CommandHandler");
+exports.CommandHandler = require("./CommandHandler");
 exports.EventHandler = require("./EventHandler");

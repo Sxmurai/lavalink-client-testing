@@ -11,8 +11,8 @@ module.exports = class MessageEvent extends Event {
 	async execute(message) {
 		if (
 			message.author.bot
-			|| message.channel.type !== "test"
-			|| !message.content.startsWith(this.client.options.prefix)
+			|| message.channel.type !== "text"
+			|| !message.content.startsWith(this.client.prefix)
 		) return;
 
 		const [cmd, ...args] = message.content.slice(1).split(/ +/g);
@@ -24,7 +24,7 @@ module.exports = class MessageEvent extends Event {
 		} catch (error) {
 			console.error(command.name, error); 
 		}
-	}
+	} // i know why
 
 	findCommand(id) {
 		return this.client.commands.modules.find((c) => c.name === id);

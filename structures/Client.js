@@ -3,23 +3,20 @@ const CommandHandler = require("./CommandHandler");
 const EventHandler = require("./EventHandler");
 
 module.exports = class MusicBotClient extends Client {
-	constructor(options = {}) {
+	constructor(data = {}) {
 		super({ disableMentions: "everyone" });
 
 		this.commands = new CommandHandler(this);
 		this.events = new EventHandler(this);
 
-		const {
-			prefix,
-			owners,
-			nodes = [],
-			token
-		} = options;
+		Object.keys(data).forEach(k => Object.defineProperty(this, k, { value: data[k] }));
 	}
 
 	async start() {
+		this.commands.loadAll();
+		this.events.loadAll();
 		/* Other shit for lavalink and whatever */
 
-		return this.login(this.options.token);
+		return this.login(this.token);
 	}
 } 

@@ -7,8 +7,11 @@ module.exports = class Command {
 			category,
 		} = options;
 
+		this.name = name;
+		this.category = category
+
 		this.client = client;
-		this.handler = CommandHandler;
+		this.handler = client.commands;
 	}
 
 	execute() {

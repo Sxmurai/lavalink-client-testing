@@ -6,7 +6,6 @@ module.exports = class CommandHandler {
 		this.client = client;
 		this.modules = [];
 		this.emitters = { client }
-		this.loadAll();
 	}
 
 	loadAll() {

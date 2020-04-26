@@ -6,12 +6,11 @@ module.exports = class EventHandler {
 		this.client = client;
 		this.modules = [];
 		this.emitters = { client }
-		this.loadAll();
 	}
 
 	loadAll() {
 		for (const file of readdirSync("./events")) {
-			const event = new (require(join("../events/", file))(this.client);
+			const event = new (require(join("../events/", file)))(this.client)
 			this.modules.push(event);
 			this.emitters[event.emitter][event.once ? "once" : "on"](event.name, event.execute.bind(event));
 		}

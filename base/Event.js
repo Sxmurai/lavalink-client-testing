@@ -1,4 +1,4 @@
-const { EventHandler } = reuqire("../structures");
+const { EventHandler } = require("../structures");
 
 module.exports = class Event {
 	constructor(client, options = {}) {
@@ -8,8 +8,12 @@ module.exports = class Event {
 			emitter = "client"
 		} = options;
 
+		this.name = name;
+		this.once = once;
+		this.emitter = emitter;
+
 		this.client = client;
-		this.handler = EventHandler
+		this.handler = client.events
 	}
 
 	execute() {
