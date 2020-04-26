@@ -8,4 +8,4 @@ exports.nodes = [
     }
 ];
 
-exports.token = "NzAzNzUxNjc1NDExODI0Njkx.XqULqg.pcRansCwp7IhKY4VnXp1mXBLdEU";
+exports.token = "";
