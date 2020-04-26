@@ -3,8 +3,9 @@ exports.owners = ["535585397435006987", "396096412116320258"];
 exports.nodes = [
     {
         host: "localhost",
-        port: 2333,
-        password: "youshallnotpass"
+        port: 3000,
+        auth: "youshallnotpass",
+        name: "Titty Fuck"
     }
 ];
 
