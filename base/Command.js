@@ -5,10 +5,12 @@ module.exports = class Command {
 		const {
 			name,
 			category,
+			description
 		} = options;
 
 		this.name = name;
-		this.category = category
+		this.category = category;
+		this.description = description;
 
 		this.client = client;
 		this.handler = client.commands;
