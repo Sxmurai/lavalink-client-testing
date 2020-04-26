@@ -5,6 +5,7 @@ module.exports = class PingCommand extends Command {
 		super(client, {
 			name: "ping",
 			category: "Information",
+			description: "Displays the bot's latency"
 		});
 	}
 	execute(message) {
