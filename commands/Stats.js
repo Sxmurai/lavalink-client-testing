@@ -4,17 +4,23 @@ module.exports = class StatsCommand extends Command {
     constructor(client) {
         super(client, {
             name: "stats",
-            category: "Information"
+            category: "Information",
+            description: "Displays the bot's stats"
         });
     }
 
     execute(message) {
+        console.log(this.client.music.getNode().stats)
+
+        const nodeStats = this.client.music.getNode().stats
+
         return message.channel.send(
             [
-                `Memory : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB/S`,
-                `CPU    : ${(process.cpuUsage().user / 1024 / 1024).toFixed(2)}%`
+                `> System`,
+                `   - User Memory : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB/S`,
+                `   - User CPU    : ${(process.cpuUsage().user / 10000).toFixed(2)}%`
             ].join("\n"),
-            { code: "js" }
+            { code: "md" }
         )
     }
 }
