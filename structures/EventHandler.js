@@ -5,7 +5,7 @@ module.exports = class EventHandler {
 	constructor(client) {
 		this.client = client;
 		this.modules = [];
-		this.emitters = { client }
+		this.emitters = { client, ws: client.ws }
 	}
 
 	loadAll() {

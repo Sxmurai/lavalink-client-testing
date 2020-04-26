@@ -1,4 +1,4 @@
-const { Client, CommandHandler, EventHandler } = require("./structures");
+const { Client } = require("./structures");
 const { prefix, owners, nodes, token } = require("./config");
 
 const client = new Client({
