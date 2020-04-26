@@ -10,10 +10,6 @@ module.exports = class StatsCommand extends Command {
     }
 
     execute(message) {
-        console.log(this.client.music.getNode().stats)
-
-        const nodeStats = this.client.music.getNode().stats
-
         return message.channel.send(
             [
                 `> System`,

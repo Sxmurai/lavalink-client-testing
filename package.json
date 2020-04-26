@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Sxmurai/lavalink-client-testing#readme",
   "dependencies": {
-    "discord.js": "github:discordjs/discord.js"
+    "discord.js": "github:discordjs/discord.js",
+    "erela.js": "^1.1.7"
   }
 }
