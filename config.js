@@ -4,7 +4,8 @@ exports.nodes = [
     {
         host: "localhost",
         port: 2333,
-        password: "youshallnotpass"
+        password: "youshallnotpass",
+        id: "Main"
     }
 ];
 
